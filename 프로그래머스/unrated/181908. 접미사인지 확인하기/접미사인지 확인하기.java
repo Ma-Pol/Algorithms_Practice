@@ -9,6 +9,8 @@ class Solution {
             }
         }
         
+        // endsWith() 메서드도 있네요?
+        
         return result;
     }
 }
