@@ -1,6 +1,8 @@
 class Solution {
     public int solution(int chicken) {
-        return serviceChicken(chicken);
+        int coupon = chicken;
+        
+        return serviceChicken(coupon);
     }
     
     private int serviceChicken(int coupon) {
