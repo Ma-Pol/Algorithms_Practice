@@ -5,7 +5,7 @@ class Solution {
         
         // 각 학생의 평균 점수를 저장(double형)
         for(int i = 0; i < score.length; i++)
-            avg[i] = (double) (score[i][0] + score[i][1]) / 2.0;
+            avg[i] = (score[i][0] + score[i][1]) / 2.0;
         
         // 각 학생의 평균 점수를 비교, 등수를 저장
         for(int i = 0; i < avg.length; i++) {
