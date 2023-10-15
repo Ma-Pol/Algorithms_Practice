@@ -2,7 +2,7 @@ import java.util.*;
 
 class Solution {
     public int[] solution(int[] numbers) {
-        Set<Integer> set = new HashSet<>();
+        Set<Integer> set = new TreeSet<>();
         int[] result = null;
         int idx = 0;
         
@@ -15,8 +15,6 @@ class Solution {
         
         while(iter.hasNext())
             result[idx++] = Integer.parseInt(iter.next().toString());
-        
-        Arrays.sort(result);
         
         return result;
     }
