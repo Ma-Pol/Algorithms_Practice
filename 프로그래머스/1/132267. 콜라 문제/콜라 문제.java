@@ -12,5 +12,7 @@ class Solution {
         }
         
         return result;
+        
+        // return (n - b) / (a - b) * b;
     }
 }
