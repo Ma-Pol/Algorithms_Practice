@@ -8,7 +8,6 @@ BEGIN
         SELECT DISTINCT(salary)
         FROM Employee
         ORDER BY salary DESC
-        LIMIT 1
-        OFFSET N
+        LIMIT N, 1
     );
 END
