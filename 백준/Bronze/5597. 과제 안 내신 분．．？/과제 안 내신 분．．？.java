@@ -23,8 +23,8 @@ public class Main {
                 else
                     second = i + 1;
         
-        System.out.println(Math.min(first, second));
-        System.out.print(Math.max(first, second));
+        System.out.println(first);
+        System.out.print(second);
         
         br.close();
     }
