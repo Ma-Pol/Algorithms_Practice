@@ -7,18 +7,21 @@ class Solution {
                 for(int k = j + 1; k < nums.length; k++) {
                     int sum = nums[i] + nums[j] + nums[k];
                     
-                    result += checkPrimeNumber(sum) ? 1 : 0;
+                    if(checkPrimeNumber(sum)) result++;
                 }
         
         return result;
     }
     
     private boolean checkPrimeNumber(int n) {
-        if(n == 3) return true;
+        boolean isPrime = true;
         
         for(int i = 2; i * i <= n; i++)
-            if(n % i == 0) return false;
+            if(n % i == 0) {
+                isPrime = false;
+                break;
+            }
         
-        return true;
+        return isPrime;
     }
 }
