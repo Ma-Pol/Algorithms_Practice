@@ -7,10 +7,10 @@ public class Main {
         StringBuilder sb = new StringBuilder();
         
         int[][] coors = new int[2][3];
-        int[] result = new int[2];
         
         for(int i = 0; i < 3; i++) {
             String[] input = (br.readLine()).split(" ");
+            
             coors[0][i] = Integer.parseInt(input[0]);
             coors[1][i] = Integer.parseInt(input[1]);
         }
