@@ -15,13 +15,14 @@ public class Main {
         Arrays.sort(cards);
         
         for(int i = 0; i < cards.length - 2; i++) {
-            if(cards[i] > M) break;
+            if(cards[i] + cards[i + 1] + cards[i + 2] > M) break;
             
             for(int j = i + 1; j < cards.length - 1; j++) {
-                if(cards[i] + cards[j] > M) break;
+                if(cards[i] + cards[j] + cards[j + 1] > M) break;
                 
                 for(int k = j + 1; k < cards.length; k++) {
                     int sum = cards[i] + cards[j] + cards[k];
+                    
                     if(sum > M) break;
                     
                     if(sum <= M && sum > maxSum) maxSum = sum;
