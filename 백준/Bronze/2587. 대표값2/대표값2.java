@@ -7,21 +7,18 @@ public class Main {
         StringBuilder sb = new StringBuilder();
         
         int[] numArr = new int[5];
-        int cnt = 0, sum = 0, median = 0;
+        int sum = 0;
         
-        for(int i = 0; i < numArr.length; i++)
-            numArr[i] = Integer.parseInt(br.readLine());
+        for(int i = 0; i < numArr.length; i++) {
+            int num = Integer.parseInt(br.readLine());
+            
+            numArr[i] = num;
+            sum += num;
+        }
         
         Arrays.sort(numArr);
         
-        for(int num : numArr) {
-            sum += num;
-            
-            if(cnt++ == 2)
-                median = num;
-        }
-        
-        System.out.print(sb.append(sum / 5).append("\n").append(median).toString());
+        System.out.print(sb.append(sum / 5).append("\n").append(numArr[2]).toString());
         
         br.close();
     }
