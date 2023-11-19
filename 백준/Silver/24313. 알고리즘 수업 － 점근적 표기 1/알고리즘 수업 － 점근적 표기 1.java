@@ -11,7 +11,7 @@ public class Main {
         int c = Integer.parseInt(br.readLine());
         int n0 = Integer.parseInt(br.readLine());
         
-        System.out.print((c - a1) * n0 >= a0 && c >= a1 ? 1 : 0);
+        System.out.print(c >= a1 && (c - a1) * n0 >= a0 ? 1 : 0);
         
         br.close();
     }
