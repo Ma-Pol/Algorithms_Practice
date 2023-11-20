@@ -2,54 +2,42 @@ import java.io.*;
 import java.util.*;
 
 public class Main {
-    private int[] cardArr;
-    private int[] numberArr;
-    private BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    private StringBuilder sb = new StringBuilder();
-    
     public static void main(String[] args) throws IOException {
-        Main main = new Main();
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
+        StringTokenizer st = null;
 
-        main.arrayInit(ArrayType.CARD);
-        main.arrayInit(ArrayType.NUMBER);
+        int N = Integer.parseInt(br.readLine());
+        int[] cardArr = new int[N];
+        st = new StringTokenizer(br.readLine());
 
-        Arrays.sort(main.cardArr);
+        for(int i = 0; i < N; i++)
+            cardArr[i] = Integer.parseInt(st.nextToken());
 
-        main.searchNumber();
 
-        System.out.print(main.sb.toString());
+        int M = Integer.parseInt(br.readLine());
+        int[] numberArr = new int[M];
+        st = new StringTokenizer(br.readLine());
 
-        main.br.close();
-    }
-    
-    private void arrayInit(ArrayType type) throws IOException {
-        int length = Integer.parseInt(this.br.readLine());
-        int[] arr = new int[length];
-        StringTokenizer token = new StringTokenizer(this.br.readLine());
+        for(int i = 0; i < M; i++)
+            numberArr[i] = Integer.parseInt(st.nextToken());
 
-        for(int i = 0; i < length; i++)
-            arr[i] = Integer.parseInt(token.nextToken());
 
-        if(type == ArrayType.CARD)
-            this.cardArr = arr;
-        else
-            this.numberArr = arr;
-    }
-    
-    private void searchNumber() {
-        for(int i = 0; i < this.numberArr.length; i++) {
+        Arrays.sort(cardArr);
+
+        for(int i = 0; i < M; i++) {
             int left = 0;
-            int right = this.cardArr.length - 1;
+            int right = N - 1;
             int mid = 0;
             boolean isExist = false;
 
             while(left <= right) {
                 mid = (left + right) / 2;
 
-                if(this.cardArr[mid] == this.numberArr[i]) {
+                if(cardArr[mid] == numberArr[i]) {
                     isExist = true;
                     break;
-                } else if(this.cardArr[mid] < this.numberArr[i]) {
+                } else if(cardArr[mid] < numberArr[i]) {
                     left = mid + 1;
                 } else {
                     right = mid - 1;
@@ -57,13 +45,13 @@ public class Main {
             }
 
             if(isExist)
-                this.sb.append("1 ");
+                sb.append("1 ");
             else
-                this.sb.append("0 ");
+                sb.append("0 ");
         }
-    }
-    
-    private enum ArrayType {
-        CARD, NUMBER
+
+        System.out.print(sb.toString());
+
+        br.close();
     }
 }
