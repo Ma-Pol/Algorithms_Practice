@@ -3,7 +3,6 @@ import java.io.*;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringBuilder answer = new StringBuilder();
         
         String[] birth = br.readLine().split(" ");
         String[] today = br.readLine().split(" ");
