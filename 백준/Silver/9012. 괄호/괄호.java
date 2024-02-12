@@ -10,19 +10,17 @@ public class Main {
         inputLoop:
         while(T-- > 0) {
             int count = 0;
-            String[] input = br.readLine().split("");
+            String[] parenthesisString = br.readLine().split("");
             
-            for(String unit : input) {
-                switch(unit) {
+            for(String parenthesis : parenthesisString) {
+                
+                switch(parenthesis) {
                     case "(":
                         count++;
                         break;
                     case ")":
                         count--;
                         break;
-                    default:
-                        sb.append("NO\n");
-                        continue inputLoop;
                 }
                 
                 if(count < 0) {
