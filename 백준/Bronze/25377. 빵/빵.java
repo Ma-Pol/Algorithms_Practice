@@ -17,7 +17,7 @@ public class Main {
             }
         }
         
-        System.out.print(minTime);
+        System.out.print(minTime != Integer.MAX_VALUE ? minTime : -1);
         
         br.close();
     }
