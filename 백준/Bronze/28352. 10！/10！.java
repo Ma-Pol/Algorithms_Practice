@@ -5,15 +5,12 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         
         int N = Integer.parseInt(br.readLine());
-        long nFact = 1;
-        int week = 60 * 60 * 24 * 7;
+        int answer = 6;
         
+        while(N > 10)
+            answer *= N--;
         
-        while(N > 1) {
-            nFact *= N--;
-        }
-        
-        System.out.print(nFact / week);
+        System.out.print(answer);
         
         br.close();
     }
