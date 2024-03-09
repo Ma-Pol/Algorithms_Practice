@@ -17,7 +17,7 @@ public class Main {
         int x2 = (b - 1) / 4;
         int y2 = (b - 1) % 4;
         
-        System.out.print((Math.max(x1, x2) - Math.min(x1, x2)) + (Math.max(y1, y2) - Math.min(y1, y2)));
+        System.out.print(Math.abs(x1 - x2) + Math.abs(y1 - y2));
         
         br.close();
     }
