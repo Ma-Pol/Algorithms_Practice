@@ -1,27 +1,35 @@
+import java.io.*;
 import java.util.*;
 
 public class Main {
-
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int[] arr = new int[3];
-
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = sc.nextInt();
-        }
-
-        String s = sc.next();
-        Arrays.sort(arr);
-
-        for (int j = 0; j < arr.length; j++) {
-            if ('A' == s.charAt(j)) {
-                System.out.print(arr[0] + " ");
-            } else if ('B' == s.charAt(j)) {
-                System.out.print(arr[1] + " ");
-            } else if ('C' == s.charAt(j)) {
-                System.out.print(arr[2] + " ");
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
+        
+        int[] nums = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+        
+        Arrays.sort(nums);
+        
+        char[] alp = br.readLine().toCharArray();
+        
+        for(char temp : alp) {
+            switch(temp) {
+                case 'A':
+                    sb.append(nums[0]);
+                    break;
+                case 'B':
+                    sb.append(nums[1]);
+                    break;
+                case 'C':
+                    sb.append(nums[2]);
+                    break;
             }
+            
+            sb.append(" ");
         }
-
+        
+        System.out.print(sb.toString());
+        
+        br.close();
     }
 }
