@@ -14,10 +14,9 @@ public class Main {
             for(int i = 0; i < input.length; i++)
                 input[i] *= input[i];
             
-            int c = Math.max(input[0], Math.max(input[1], input[2]));
-            int ab = input[0] + input[1] + input[2] - c;
+            Arrays.sort(input);
             
-            bw.write(ab == c ? "right\n" : "wrong\n");
+            bw.write(input[0] + input[1] == input[2] ? "right\n" : "wrong\n");
         }
         
         bw.flush();
