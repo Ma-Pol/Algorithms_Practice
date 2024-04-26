@@ -1,5 +1,4 @@
 import java.io.*;
-import java.math.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -9,11 +8,11 @@ public class Main {
             int n = Integer.parseInt(br.readLine());
             
             while(n-- > 0) {
-                BigInteger x = new BigInteger(br.readLine());
+                String num = br.readLine();
                 
-                int remaind = x.remainder(new BigInteger("2")).intValue();
-                
-                sb.append(remaind == 0 ? "even" : "odd").append("\n");
+                sb.append(
+                    Integer.parseInt(num.substring(num.length() - 1)) % 2 == 0 ? "even" : "odd"
+                ).append("\n");
             }
             
             System.out.print(sb.toString());
