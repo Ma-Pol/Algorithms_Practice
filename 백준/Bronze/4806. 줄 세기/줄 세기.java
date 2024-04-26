@@ -6,12 +6,8 @@ public class Main {
         
         int count = 0;
         
-        while(true) {
-            if(br.readLine() != null)
-                count++;
-            else
-                break;
-        }
+        while(br.readLine() != null)
+            count++;
         
         System.out.print(count);
         
