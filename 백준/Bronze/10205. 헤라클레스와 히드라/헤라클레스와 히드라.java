@@ -11,10 +11,10 @@ public class Main {
                 sb.append("Data Set ").append(i).append(":\n");
                 
                 int hp = Integer.parseInt(br.readLine());
-                String[] pattern = br.readLine().split("");
+                char[] pattern = br.readLine().toCharArray();
                 
-                for(String temp : pattern)
-                    hp += temp.equals("c") ? 1 : -1;
+                for(char temp : pattern)
+                    hp += temp == 'c' ? 1 : -1;
                 
                 sb.append(hp).append("\n\n");
             }
