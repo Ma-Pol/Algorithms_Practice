@@ -8,13 +8,17 @@ public class Main {
             int n = Integer.parseInt(br.readLine());
             
             sb.append(
-                ("@".repeat(n) + " ".repeat(n * 3) + "@".repeat(n) + "\n").repeat(n * 2)
+                ("@".repeat(n) + " ".repeat(n * 3) + "@".repeat(n) + "\n")
+                    .repeat(n * 2)
             ).append(
-                ("@".repeat(n * 5) + "\n").repeat(n)
+                ("@".repeat(n * 5) + "\n")
+                    .repeat(n)
             ).append(
-                ("@".repeat(n) + " ".repeat(n * 3) + "@".repeat(n) + "\n").repeat(n)
+                ("@".repeat(n) + " ".repeat(n * 3) + "@".repeat(n) + "\n")
+                    .repeat(n)
             ).append(
-                ("@".repeat(n * 5) + "\n").repeat(n)
+                ("@".repeat(n * 5) + "\n")
+                    .repeat(n)
             );
             
             System.out.print(sb.toString());
