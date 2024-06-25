@@ -21,7 +21,7 @@ public class Main {
             if(n == 1)
                 System.out.print(agre == 1 ? "APPROVED" : oppo == 1 ? "REJECTED" : "INVALID");
             else
-                System.out.print(n / 2 <= with ? "INVALID" : agre > oppo ? "APPROVED" : "REJECTED");
+                System.out.print((n + 1) / 2 <= with ? "INVALID" : agre > oppo ? "APPROVED" : "REJECTED");
         } catch(IOException e) {
             e.getStackTrace();
         }
