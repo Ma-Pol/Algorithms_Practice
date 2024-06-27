@@ -5,9 +5,7 @@ public class Main {
         try(BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
             char input = br.readLine().charAt(0);
             
-            int answer = Math.abs((input + 0) - 73) + 84;
-            
-            System.out.print(answer);
+            System.out.print(Math.abs(input - 'I') + 84);
         } catch(IOException e) {
             e.getStackTrace();
         }
